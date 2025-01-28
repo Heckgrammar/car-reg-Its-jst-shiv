@@ -7,9 +7,9 @@
             int charge = 0;
             Console.Write("Enter your car registration: ");
             string carReg = Console.ReadLine();
-            while (carReg.Length > 8)
+            while (carReg.Length < 8)
             {
-                string displayMessge = " is not valid";
+                string displayMessge = carReg + " is not valid";
                 Console.Write(displayMessge);
                 carReg = Console.ReadLine();
             }
@@ -21,9 +21,9 @@
             }
             else
             {
-                charge = hours * 2;
+                charge = (hours * 2) + 2;
             }
-            Console.WriteLine(charge);
+            Console.WriteLine("Your cost is £" + charge);
 
             // rewrite line 12 to concatenate the car registration with the string is not valid
             // store the result in display message
